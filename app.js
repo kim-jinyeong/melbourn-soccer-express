@@ -13,7 +13,6 @@ const nodes = ['user', 'todo']
 for(const leaf of nodes){
   require(`${APP}/${leaf}.route`)({url:`/api/${leaf}`,app})
 }
-require(`${APP}/user.route`)({url:`/api/user`,app})
 const corsOptions = {
   origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 
