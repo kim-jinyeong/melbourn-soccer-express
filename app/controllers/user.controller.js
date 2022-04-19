@@ -17,9 +17,9 @@ exports.userlist = (req, res) => {
     })
     
 }
-exports.profile = (req, res) => {
-    console.log(`### user profile access ### `)
-    UserSchema.find({username: req.params.id})
+exports.login = (req, res) => {
+    console.log(`### user login access ### `)
+    UserSchema.find({userid: req.params.id, password : req.params.password})
     .exec((err, user) => {
         if (err) return res.status(400).send(err)
         res.status(200).json({ success: true, user })
