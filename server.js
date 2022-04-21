@@ -66,18 +66,3 @@ async function startServer(){
   })
 }
 startServer()
-
-
-/*
-app.post("/api/basic/calc", (req, res)=>{
-  const {num1, num2, opcode} = req.body
-  console.log(`넘어온 JSON 값 : ${JSON.stringify(req.body)}`)
-  console.log(`숫자 1 : ${num1}`)
-  console.log(`연산자 : ${opcode}`)
-  console.log(`숫자 2 : ${num2}`)
-  const json = computeCalc(req.body)
-  console.log(`계산된 JSON 값 : ${JSON.stringify(json)}`)
-  res.json(json)
-
-})        
-*/
